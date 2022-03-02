@@ -5,7 +5,6 @@ using UnityEngine;
 public class TouchController : MonoBehaviour
 {
     public OVRInput.Controller controller;
-
     // Start is called before the first frame update
     void Start()
     {
