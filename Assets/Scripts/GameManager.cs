@@ -6,20 +6,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    [Serializable]
-    public class PortalInfos
-    {
-        public GameObject camera1;
-        public GameObject camera2;
-        public GameObject portal1;
-        public GameObject portal2;
-    }
     public GameObject player;
     private Vector3 playerPos;
     private int playerPosCount = 0;
     const int playerPosLimit = 3;
 
-    public PortalInfos portalInfos;
     // Start is called before the first frame update
     void Awake()
     {

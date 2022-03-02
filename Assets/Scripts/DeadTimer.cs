@@ -23,10 +23,4 @@ public class DeadTimer : MonoBehaviour
         Destroy(gameObject);
         yield return default;
     }
-
-    private void OnDestroy()
-    {
-        var subject = GetComponent<Subject>();
-        subject.Publish();
-    }
 }
