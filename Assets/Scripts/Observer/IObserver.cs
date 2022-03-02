@@ -6,3 +6,8 @@ interface IObserver<T>
 {
     public void Response(T t);
 }
+
+interface IObserver
+{
+    public void Response();
+}

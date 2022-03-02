@@ -14,3 +14,11 @@ public interface ISubject<T>
     public void RemoveObserve(Issue i);
     public void Publish();
 }
+
+public interface ISubject
+{
+    public delegate void Issue();
+    public void AddObserve(Issue i);
+    public void RemoveObserve(Issue i);
+    public void Publish();
+}
