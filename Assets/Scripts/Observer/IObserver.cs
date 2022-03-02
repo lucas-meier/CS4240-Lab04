@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-interface IObserver
+interface IObserver<T>
 {
-    public void Response();
+    public void Response(T t);
 }
