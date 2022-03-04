@@ -42,7 +42,7 @@ public class Grab : MonoBehaviour
         RaycastHit[] hits;
 
         //only reacts for ojects in the correct layer(s)
-        hits = Physics.SphereCastAll(transform.position, grabRadius, transform.forward, 0f, grabMask);
+        hits = Physics.SphereCastAll(transform.position, grabRadius, transform.forward, 2f, grabMask);
 
         if (hits.Length > 0)
         {

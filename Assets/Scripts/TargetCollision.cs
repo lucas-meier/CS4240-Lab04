@@ -18,7 +18,7 @@ public class TargetCollision : MonoBehaviour, ISubject<Observer.OnScoreUpdateInf
     ISubject<Observer.OnScoreUpdateInfo>.Issue issue;
     [SerializeField]
     private Observer.OnScoreUpdateInfo updateInfo;
-
+    public AudioSource audio;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +44,7 @@ public class TargetCollision : MonoBehaviour, ISubject<Observer.OnScoreUpdateInf
             thisRenderer.material = otherRenderer.material;
             Publish();
             Destroy(otherRenderer.gameObject);
+            audio.Play(0);
         }
     }
     public void AddObserve(ISubject<Observer.OnScoreUpdateInfo>.Issue i)

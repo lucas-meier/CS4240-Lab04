@@ -15,6 +15,7 @@ public class Shooter : MonoBehaviour, ISubject<Observer.OnPickedInfo>
 
     private ISubject<Observer.OnPickedInfo>.Issue shootedIssue;
     private Weapon weapon;
+    public AudioSource audio;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +43,7 @@ public class Shooter : MonoBehaviour, ISubject<Observer.OnPickedInfo>
 
     void Spawn()
     {
+        audio.Play(0);
         var spawnee = Instantiate(projectile);
         spawnee.transform.position = transform.position;
         spawnee.transform.rotation = transform.rotation;
